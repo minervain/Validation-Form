@@ -2,17 +2,25 @@ package com.aou.Full_stack_validation.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class UserEntities {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String username;
     private String name;
     private String email;
+
+    public UserEntities(Long id, String username, String name, String email) {
+        this.id = id;
+        this.username = username;
+        this.name = name;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
