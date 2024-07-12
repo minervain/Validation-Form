@@ -15,6 +15,11 @@ public class UserEntities {
     private String name;
     private String email;
 
+
+    public UserEntities() {
+    }
+
+    //
     public UserEntities(Long id, String username, String name, String email) {
         this.id = id;
         this.username = username;
